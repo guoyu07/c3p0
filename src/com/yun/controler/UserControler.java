@@ -8,7 +8,7 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.yun.dao.BaseDao;
+import com.base.dao.BaseDao;
 @Controller
 public class UserControler {
 	@Resource

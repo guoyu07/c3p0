@@ -1,4 +1,4 @@
-package com.yun.dao.impl;
+package com.base.dao.impl;
 
 import java.util.List;
 
@@ -7,7 +7,7 @@ import javax.annotation.Resource;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 
-import com.yun.dao.BaseDao;
+import com.base.dao.BaseDao;
 
 @Service
 public class BaseDaoImpl implements BaseDao{
