@@ -13,7 +13,7 @@ import com.yun.dao.BaseDao;
 public class UserControler {
 	@Resource
 	private BaseDao baseDao;
-	@RequestMapping("test")
+	@RequestMapping("test") 
 	public String inputProduct() {
 //		List<?>list=baseDao.getList("select * from TB_SYS_USER t");
 //		System.out.println(list);
