@@ -15,9 +15,9 @@ public class UserControler {
 	private BaseDao baseDao;
 	@RequestMapping("test")
 	public String inputProduct() {
-		List<?>list=baseDao.getList("select * from TB_SYS_USER t");
-		System.out.println(list);
-		return "index";
+//		List<?>list=baseDao.getList("select * from TB_SYS_USER t");
+//		System.out.println(list);
+		return "redirect:/page/index.html?url=434344535";
 	}
 	
 	@RequestMapping("base/test2")
