@@ -31,22 +31,22 @@ public class SecurityInterceptor implements HandlerInterceptor {
 				.getAttribute("roles");
 
 		// 如果角色是空的,则是未登录，跳转
-		// this.roleService.checkRole();
-		if (rolesMap == null || !rolesMap.containsKey("role_id")) {
-			// //如果角色不为空，检测路径访问是否合法，合法则放行，如果不合法则跳转到登录页面
-			PrintWriter out = response.getWriter();
-			StringBuilder builder = new StringBuilder();
-			builder.append("<script type=\"text/javascript\">");
-			builder.append("alert('会话失效，请重新登录！');");
-			builder.append("window.top.location.href='");
-			builder.append("/c3p0/index.jsp");
-			builder.append("';");
-			builder.append("</script>");
-			out.print(builder.toString());
-			return false;
-		}
+//		// this.roleService.checkRole();
+//		if (rolesMap == null || !rolesMap.containsKey("role_id")) {
+//			// //如果角色不为空，检测路径访问是否合法，合法则放行，如果不合法则跳转到登录页面
+//			PrintWriter out = response.getWriter();
+//			StringBuilder builder = new StringBuilder();
+//			builder.append("<script type=\"text/javascript\">");
+//			builder.append("alert('会话失效，请重新登录！');");
+//			builder.append("window.top.location.href='");
+//			builder.append("/c3p0/index.jsp");
+//			builder.append("';");
+//			builder.append("</script>");
+//			out.print(builder.toString());
+//			return false;
+//		}
 
-		return false;
+		return true;
 	}
 
 }
