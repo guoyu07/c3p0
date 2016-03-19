@@ -24,9 +24,7 @@ public class ExceptionInterceptor implements HandlerInterceptor {
 			throws Exception {
 		// TODO Auto-generated method stub
 		PrintWriter out=response.getWriter();
-		out.write("测试萨嘎");
 		System.out.println("end pathers  ");
-//		log.error("--------------------");
 		if (ex!=null) {
 			System.out.println("异常信息：" + ex.getMessage());
 			System.out.println(ex);

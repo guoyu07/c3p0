@@ -47,9 +47,6 @@
 			<bean class="com.base.web.interceptor.SecurityInterceptor" />
 		</mvc:interceptor>
 		<mvc:interceptor>
-			<mvc:mapping path="/classtable/*" />
-			<mvc:mapping path="/table/*" />
-			<mvc:mapping path="/attend/*" />
 			<mvc:mapping path="/attend/*" />
 			<mvc:mapping path="/*" />
 			<bean class="com.base.web.interceptor.ExceptionInterceptor" />
