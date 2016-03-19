@@ -18,7 +18,7 @@
 	<mvc:resources mapping="/css/**" location="/WEB-INF/css/" />
 	<!-- <mvc:resources location="/js/**" mapping="/js/"/>
 	 -->
-	<mvc:resources location="/,WEB-INF/css/" mapping="/css/**" />
+	<mvc:resources location="/WEB-INF/css/" mapping="/css/**" />
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="suffix" value=".html" />
