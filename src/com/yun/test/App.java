@@ -8,6 +8,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 
 public class App {
 
+//	private Logger logger=Logger.getLogger(this.getClass());
 	public static void main(String[] args) {
 		ApplicationContext applicationContext = new FileSystemXmlApplicationContext(
 				"WebRoot/WEB-INF/applicationContext.xml");

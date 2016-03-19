@@ -21,7 +21,6 @@ import com.base.dao.JdbcSupport;
 public class UserControler {
 	@Resource
 	private BaseDao baseDao;
-	
 	@Resource
 	JdbcSupport jdbcSupport;
 	@RequestMapping("test") 

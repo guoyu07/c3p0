@@ -8,13 +8,12 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 
-public class CharactorFilter implements Filter {
+public class CharacterEncodingFilter implements Filter {
 
 	String encoding = null;
 	public void destroy() {
 		encoding = null;
 	}
-
 	
 	public void doFilter(ServletRequest arg0, ServletResponse arg1,
 			FilterChain arg2) throws IOException, ServletException {
