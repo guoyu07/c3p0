@@ -7,6 +7,8 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.List;
+import java.util.Map;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -26,7 +28,7 @@ public class UserControler {
 	JdbcSupport jdbcSupport;
 	Logger logger=Logger.getLogger(this.getClass());
 	@RequestMapping("test") 
-	public String inputProduct() throws SQLException {
+	public String inputProduct(HttpServletRequest request,HttpServletResponse response) throws SQLException {
 //		List<?>list=baseDao.getList("select * from TB_SYS_USER t");
 //		System.out.println(list);
 		Connection conn=jdbcSupport.getConnection();
@@ -35,6 +37,8 @@ public class UserControler {
 		while (rs.next()) {
 			String name=rs.getString("xm");
 		}
+		List<Map<String, Object>> map=baseDao.queryForList("select * from TB_SYS_USER t");
+		request.setAttribute("sss", map);
 		return "index.jsp";
 	}
 	

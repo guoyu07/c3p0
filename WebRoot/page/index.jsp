@@ -25,5 +25,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
  	  <a href="productInput.do"> 添加商品</a> <br>
  	  <a href="productInput2.do"> 添加商品2</a> <br>
  	  <a href="productTestJson.do"> 测试json支持</a> <br>
+ 	  <div>--${sss}---</div>
   </body>
 </html>
