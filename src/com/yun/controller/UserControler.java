@@ -1,12 +1,9 @@
-package com.yun.controler;
+package com.yun.controller;
 
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.Connection;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.List;
 import java.util.Map;
 
@@ -24,19 +21,11 @@ import com.base.dao.JdbcSupport;
 public class UserControler {
 	@Resource
 	private BaseDao baseDao;
-	@Resource
-	JdbcSupport jdbcSupport;
 	Logger logger=Logger.getLogger(this.getClass());
 	@RequestMapping("test") 
 	public String inputProduct(HttpServletRequest request,HttpServletResponse response) throws SQLException {
 //		List<?>list=baseDao.getList("select * from TB_SYS_USER t");
 //		System.out.println(list);
-		Connection conn=jdbcSupport.getConnection();
-		Statement statement=conn.createStatement();
-		ResultSet rs=statement.executeQuery("select * from TB_SYS_USER t");
-		while (rs.next()) {
-			String name=rs.getString("xm");
-		}
 		List<Map<String, Object>> map=baseDao.queryForList("select * from TB_SYS_USER t");
 		request.setAttribute("sss", map);
 		return "index.jsp";

@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -26,5 +27,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
  	  <a href="productInput2.do"> 添加商品2</a> <br>
  	  <a href="productTestJson.do"> 测试json支持</a> <br>
  	  <div>--${sss}---</div>
+ 	  <table>
+ 	  <c:forEach items="${sss}" var="o">
+ 	  	<tr><td>${o.xm}</td></tr>
+ 	  </c:forEach>
+ 	  	
+ 	  </table>
   </body>
 </html>

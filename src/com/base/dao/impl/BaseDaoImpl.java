@@ -18,44 +18,57 @@ public class BaseDaoImpl implements BaseDao {
 	JdbcTemplate jdbcTemplate;
 
 	public int[] batchUpdate(String... sql) throws DataAccessException {
-		return this.batchUpdate(sql);
+		return this.jdbcTemplate.batchUpdate(sql);
 	}
 
 	public int[] batchUpdate(List<String> sqls) {
-
-		return this.batchUpdate(sqls);
+		String []obj=null;
+		int length=0;
+		if (sqls!=null) {
+			length=sqls.size();
+			obj=new String[length];
+		};
+		for (int i = 0; i < length; i++) {
+			obj[i]=sqls.get(i);
+		}
+		return this.jdbcTemplate.batchUpdate(obj);
 	}
 
 	public void execute(String sql) throws DataAccessException {
 
-		this.execute(sql);
+		this.jdbcTemplate.execute(sql);
 
 	}
 
-	public String quertForValue(String sql, String key) {
-
-		return this.quertForValue(sql, key);
-	}
+//	public String queryForValue(String sql) {
+//
+//		this.jdbcTemplate.queryforob
+//		return this.jdbcTemplate.queryForObject(sql, Integer.class);
+//	}
+//	
+//	public String queryForValue(String sql, String key) {
+//
+//		return this.jdbcTemplate.queryForObject(sql, Integer.class);
+//	}
 
 	public int queryForCount(String sql) throws DataAccessException {
-
-		return this.queryForCount(sql);
+		int count=this.jdbcTemplate.queryForObject(sql, Integer.class);
+		return count;
 	}
 
 	public List<Map<String, Object>> queryForList(String sql)
 			throws DataAccessException {
-
-		return this.queryForList(sql);
+		return this.jdbcTemplate.queryForList(sql);
 	}
 
 	public Map<String, Object> queryForMap(String sql) {
 
-		return this.queryForMap(sql);
+		return this.jdbcTemplate.queryForMap(sql);
 	}
 
 	public int update(String sql) throws DataAccessException {
 
-		return this.update(sql);
+		return this.jdbcTemplate.update(sql);
 	}
 
 }

@@ -42,6 +42,6 @@ public interface BaseDao {
 	
 	public int queryForCount(String sql) throws DataAccessException;
 	
-	public  String quertForValue(String sql,String key);
+//	public  String quertForValue(String sql,String key);
 
 }
