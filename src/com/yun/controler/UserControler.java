@@ -31,11 +31,11 @@ public class UserControler {
 //		System.out.println(list);
 		Connection conn=jdbcSupport.getConnection();
 		Statement statement=conn.createStatement();
-		ResultSet rs=statement.executeQuery("select *g from TB_SYS_USER t");
+		ResultSet rs=statement.executeQuery("select * from TB_SYS_USER t");
 		while (rs.next()) {
 			String name=rs.getString("xm");
 		}
-		return "page/index.jsp";
+		return "index.jsp";
 	}
 	
 	@RequestMapping("base/test2")
