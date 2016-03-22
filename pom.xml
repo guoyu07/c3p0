@@ -18,7 +18,7 @@
 			<resource>
 				<directory>${basedir}/src</directory>
 				<excludes>
-					<exclude>**/*.java</exclude>
+					<exclude>**/*.java</exclude>  
 				</excludes>
 			</resource>
 		</resources>
@@ -90,7 +90,7 @@
 			<artifactId>ojdbc</artifactId>
 			<version>14</version>
 		</dependency> 
-		<dependency>
+		<dependency> 
 			<groupId>com.mchange</groupId>
 			<artifactId>c3p0</artifactId>
 			<version>0.9.5.2</version>
