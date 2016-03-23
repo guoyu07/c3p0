@@ -23,7 +23,7 @@ public class UserControler {
 	private BaseDao baseDao;
 	Logger logger=Logger.getLogger(this.getClass());
 	@RequestMapping("test") 
-	public String inputProduct(HttpServletRequest request,HttpServletResponse response) throws SQLException {
+	public String inputProduct(HttpServletRequest request,HttpServletResponse response) throws Exception {
 //		List<?>list=baseDao.getList("select * from TB_SYS_USER t");
 //		System.out.println(list);
 		List<Map<String, Object>> map=baseDao.queryForList("select * from TB_SYS_USER t");
