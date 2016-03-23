@@ -26,7 +26,7 @@ public class UserControler {
 	public String inputProduct(HttpServletRequest request,HttpServletResponse response) throws SQLException {
 //		List<?>list=baseDao.getList("select * from TB_SYS_USER t");
 //		System.out.println(list);
-		List<Map<String, Object>> map=baseDao.queryForList("select * from wx_q_SYS_USER t");
+		List<Map<String, Object>> map=baseDao.queryForList("select * from TB_SYS_USER t");
 		request.setAttribute("sss", map);
 		return "index.jsp";
 	}
